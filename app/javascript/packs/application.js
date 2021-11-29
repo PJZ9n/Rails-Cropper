@@ -10,9 +10,11 @@ import "channels"
 
 //javascripts
 import "bootstrap"
+import "cropperjs"
 
 //stylesheets
 import "../stylesheets/application.scss"
+import "cropperjs/dist/cropper.css"
 
 Rails.start()
 Turbolinks.start()

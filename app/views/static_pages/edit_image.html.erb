@@ -1,0 +1,30 @@
+<label for="select-image">画像選択</label><br>
+<input type="file" accept="image/*" id="select-image" onchange="selectIcon(this)">
+
+<h3>Result</h3>
+<div id="result-box"></div>
+
+<!-- モーダル本体 -->
+<div class="modal fade" id="crop-modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">画像クロップ</h5>
+        <!--<button type="button" class="btn-close" data-bs-dismiss="modal"></button>-->
+      </div>
+      <div class="modal-body">
+        <button class="btn btn-info btn-sm" onclick="resetCrop()">Reset</button>
+        <div class="my-3">
+          <img src="" id="crop-image">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">保存しないで終了</button>
+        <button type="button" class="btn btn-primary" onclick="saveCrop()">保存</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= javascript_pack_tag 'static_pages/edit_image' %>
+<%= stylesheet_pack_tag 'static_pages/edit_image' %>
